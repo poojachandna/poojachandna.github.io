@@ -844,7 +844,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTerminal();
   initEmailCopy();
   initDesignSystemToggle();
-  initVanillaBadge();
+  // initVanillaBadge();
   initReadingProgress();
   initStatCounters();
   initCursorTrail();
