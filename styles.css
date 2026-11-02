@@ -149,15 +149,18 @@ button {
   grid-template-columns: repeat(12, 1fr);
   align-items: start;
   column-gap: 20px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 20px;
+  border: 1px solid var(--line-muted);
+  border-radius: 10px;
+  margin-bottom: 14px;
   text-decoration: none;
-  transition: opacity var(--transition-fast);
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+.project-item:hover {
+    border-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
 }
 
-.project-item:first-child {
-  border-top: 1px solid var(--line);
-}
 
 .project-item:hover:not(:has(.project-name-link:hover)) .project-name-title,
 .project-item:hover:not(:has(.project-name-link:hover)) .project-info-desc,
@@ -181,17 +184,14 @@ button {
 }
 
 .project-thumb {
-  width: 100%;
-  aspect-ratio: 1;
-  max-width: 78px;
-  border-radius: var(--radius-sm);
-  object-fit: cover;
-  object-position: top center;
-  align-self: start;
-  overflow: hidden;
-  background: #f6f6f6;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    object-position: top center;
+    align-self: start;
+    overflow: hidden;
 }
 
 .project-thumb--screenshot {
@@ -314,4 +314,11 @@ a.project-item .project-arrow {
   .project-thumb {
     max-width: 120px;
   }
+}
+
+.portfolio-intro {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--text);
+    margin-bottom: 32px;
 }
